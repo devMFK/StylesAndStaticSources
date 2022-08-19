@@ -1,0 +1,46 @@
+﻿<Window
+    x:Class="StylesAndStaticSources.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:StylesAndStaticSources"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="30" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="Red" />
+            <Setter Property="Background" Value="aqua" />
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="100" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Background" Value="Yellow" />
+        </Style>
+        <Style x:Key="dosyaici" TargetType="TextBox">
+            <Setter Property="FontSize" Value="50" />
+            <Setter Property="FontWeight" Value="Light" />
+            <Setter Property="Background" Value="Black" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+    </Window.Resources>
+
+    <StackPanel>
+        <Label
+            x:Name="FileNameLabel"
+            Content="Bu bir label"
+            Style="{StaticResource LabelStyle}" />
+        <Label
+            x:Name="FileNameLabel2"
+            Content="Bu da bir label"
+            Style="{StaticResource LabelStyle}" />
+        <Button Content="Bir dosya aç" Style="{StaticResource ButtonStyle}" />
+        <TextBox>Deneme</TextBox>
+        <Label FontSize="25">labell</Label>
+        <TextBox Style="{StaticResource dosyaici}">Deneme</TextBox>
+    </StackPanel>
+</Window>
